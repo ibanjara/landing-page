@@ -3,9 +3,10 @@ import imagen1 from '../assets/icon-1.avif'
 import imagen2 from '../assets/icon-2.avif'
 import imagen3 from '../assets/icon-3.avif'
 
+
 export const InfoSection = () => {
   return (
-    <div id="thanks" className="flex relative justify-evenly to-gray-800 pb-10 text-white animate__animated animate__fadeInDown z-10">
+    <div className="grid grid-cols-1 container mx-auto md:grid-cols-3 gap-8 to-gray-800 pb-10 text-white animate__animated animate__fadeInDown z-10">
 
         <InfoCard
             title="Reduce Assembly Time"
