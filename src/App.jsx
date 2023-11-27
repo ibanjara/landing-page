@@ -13,10 +13,6 @@ import { InfoSection } from './components/InfoSection'
 function App() {
   const particles = async (main) => {
     console.log(main);
-
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(main);
   };
   const handleScroll = () => {
@@ -29,7 +25,7 @@ function App() {
   return (
     <>
       <div className=''>
-        <div className=' w-full flex flex-1 justify-between items-center p-6 border-b-4 fixed z-30 bg-white border-[#BAC3D0]'>
+        <div className=' w-full flex flex-1 justify-between items-center p-6  fixed z-30 bg-gray-900 text-white'>
           <div className='flex items-center'>
             <img src={logo} className='w-[50px] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'></img>
             <p className='text-4xl ml-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'><strong>PrintHub</strong></p>
@@ -136,7 +132,7 @@ function App() {
           <div className='flex flex-col self-center'>
             <p className='text-white animate-heartbeat text-5xl text-center justify-end drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>SCAN AND PRINT ANYTHING <strong class="text-7xl"><br></br>RIGHT NOW</strong></p>
             <p className='text-white text-xl mt-5'>Ever wanted to have a 3D piece of anything? With just a video we can make that happen!</p>
-            <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-7 w-[100%] mt-8 justify-center content-center border-b-4 border-blue-700 hover:border-blue-500 rounded z-10 w-[25%] self-center">SCAN</button>
+            <button class="bg-blue-500 text-white font-bold py-2 px-7 w-[100%] mt-8 justify-center content-center border-b-4 border-blue-700 glow-on-hover rounded z-10 w-[220px] self-center">SCAN</button>
           </div>
           
           <img src={impresora} className='self-center transition duration-300 transform hover:scale-105 mt-7 w-[25%]'></img>
@@ -150,7 +146,7 @@ function App() {
             </svg>
           </a>
         </div>
-      <svg data-name="Layer 1" className="rotate-180 bottom-0 absolute bg-transparent fill-white text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <svg data-name="Layer 1" className="rotate-180 bottom-0 absolute bg-transparent fill-[#d7dbdf] text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
     </svg>
       </div>
@@ -215,37 +211,91 @@ function App() {
         </div>
     </section>
     <footer className="bg-gray-900 text-white p-10">
-    <div className="container mx-auto text-center">
-    <p className="text-sm">
-      © 2023 PrintHub. All rights reserved. Connect with us on:
-      <a href="https://tiktok.com/@printhubeus" className="text-black-500 mx-2" target="_blank" rel="noopener noreferrer">
-        <i className="fab fa-tiktok"></i>
-      </a>
-      <a href="https://twitter.com/tu_cuenta_de_twitter" className="text-blue-400 mx-2" target="_blank" rel="noopener noreferrer">
-        <i className="fab fa-x-twitter"></i>
-      </a>
-      <a href="https://instagram.com/tu_cuenta_de_instagram" className="text-pink-500 mx-2" target="_blank" rel="noopener noreferrer">
-        <i className="fab fa-instagram"></i>
-      </a>
-    </p>
-    
-    <div className="flex justify-center mt-8">
-      <div className="mx-4">
-      <a className="text-lg font-bold mb-4" href="#!">Scan</a>
-      </div>
-      <div className="mx-4">
-        <a className="text-lg font-bold mb-4" href="#!">Shop</a>
-       
-      </div>
-      <div className="mx-4">
-      <a className="text-lg font-bold mb-4" href="#!">About</a>
-      </div>
-      <div className="mx-4">
-      <a className="text-lg font-bold mb-4" href="#!">Shop</a>
-      </div>
+    <div className="container mx-auto flex justify-between items-center">
+        <div className="w-2/3 text-center">
+            <p className="text-sm">
+                © 2023 PrintHub. All rights reserved. Connect with us on:
+                <a href="https://tiktok.com/@printhubeus" className="text-black-500 mx-2" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-tiktok"></i>
+                </a>
+                <a href="https://twitter.com/tu_cuenta_de_twitter" className="text-blue-400 mx-2" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://instagram.com/tu_cuenta_de_instagram" className="text-pink-500 mx-2" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-instagram"></i>
+                </a>
+            </p>
+            <div className="flex justify-center mt-8">
+                <div className="mx-4">
+                    <a className="text-lg font-bold mb-4" href="#!">
+                        Scan
+                    </a>
+                </div>
+                <div className="mx-4">
+                    <a className="text-lg font-bold mb-4" href="#!">
+                        Shop
+                    </a>
+                </div>
+                <div className="mx-4">
+                    <a className="text-lg font-bold mb-4" href="#!">
+                        About
+                    </a>
+                </div>
+                <div className="mx-4">
+                    <a className="text-lg font-bold mb-4" href="#!">
+                        Shop
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div className="w-1/3">
+            <form className="max-w-lg mx-auto">
+                <div className="mb-4">
+                    <label className="block text-gray-300 text-sm font-bold mb-2" htmlFor="email">
+                        Email
+                    </label>
+                    <input
+                        className="appearance-none block w-full bg-gray-800 text-gray-300 border border-gray-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-gray-700"
+                        id="email"
+                        type="email"
+                        placeholder="example@example.com"
+                    />
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-300 text-sm font-bold mb-2" htmlFor="subject">
+                        Subject
+                    </label>
+                    <input
+                        className="appearance-none block w-full bg-gray-800 text-gray-300 border border-gray-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-gray-700"
+                        id="subject"
+                        type="text"
+                        placeholder="Enter your subject"
+                    />
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-300 text-sm font-bold mb-2" htmlFor="description">
+                        Description
+                    </label>
+                    <textarea
+                        className="appearance-none block w-full bg-gray-800 text-gray-300 border border-gray-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-gray-700"
+                        id="description"
+                        placeholder="Enter your message"
+                    ></textarea>
+                </div>
+                <div className="text-center">
+                    <button
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="button"
+                    >
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
-  </div>
 </footer>
+
+
       </div>
     </>
   )
