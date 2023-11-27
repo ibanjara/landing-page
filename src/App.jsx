@@ -55,9 +55,8 @@ function App() {
     </button>
   </div>
 </div>
-
-    
-      <div className="w-full h-[800px] lg:h-[1150px] bg-gradient-to-r from-blue-900 to-blue-700 flex relative flex-col justify-center items-center">
+   
+      <div className="w-full lg:h-[1150px] bg-gradient-to-r from-blue-900 to-blue-700 flex relative flex-col justify-center items-center">
       <Particles
 
       className='relative'
@@ -137,14 +136,14 @@ function App() {
     }}
     />
         <div className='flex flex-col lg:flex-row content-center justify-evenly w-full'>
-    <div className='flex flex-col self-center text-center mt-[300px] lg:mt-0'>
+    <div className='flex flex-col self-center text-center mt-[150px] lg:mt-0'>
       <p className='text-white animate-heartbeat text-3xl lg:text-5xl mb-2 lg:mb-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>
-        SCAN AND PRINT ANYTHING <strong className="text-5xl lg:text-7xl block lg:inline"><br></br>RIGHT NOW</strong>
+        SCAN AND PRINT ANYTHING <strong className="text-7xl block inline"><br></br>RIGHT NOW</strong>
       </p>
       <p className='text-white text-base lg:text-xl mt-2 lg:mt-5 mb-4 lg:w-2/3 self-center'>
         Ever wanted to have a 3D piece of anything? With just a video we can make that happen!
       </p>
-      <button className="bg-blue-500 text-black font-bold py-2 px-7 glow-on-hover lg:w-[220px] mt-4 self-center flex items-center justify-center">
+      <button className="bg-blue-500 text-black font-bold py-2 px-7 glow-on-hover w-[220px] mt-4 self-center flex items-center justify-center">
   <img src={scan} className='w-[15%] mr-5' alt="Scan Icon" />
   <span>SCAN</span>
 </button>
@@ -166,13 +165,10 @@ function App() {
     <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
   </svg>
 </div>
-    <div id="thanks" className='pt-12'>
-      <p className='text-5xl text-center text-black relative z-10'>WHY 3D PRINTING?</p>
-      
-
-  <InfoSection></InfoSection>
-
-</div>
+    <div id="thanks" className='pt-[150px]'>
+        <p className='text-5xl text-center text-black relative z-10'>WHY 3D PRINTING?</p>
+        <InfoSection></InfoSection>
+    </div>
 
 <div class="container mx-auto px-4 py-12 lg:py-16 text-center bg-gray-400 rounded shadow-2xl mt-8 mb-7">
     <h1 class="text-3xl lg:text-4xl font-bold mb-6 z-10 relative">Unlock Premium Features</h1>
