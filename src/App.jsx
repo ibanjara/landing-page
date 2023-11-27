@@ -1,6 +1,4 @@
 import logo from './assets/logo.png'
-import background from './assets/landing-page.jpg'
-import personIcon from './assets/person.png'
 import news from './assets/imagen1.png'
 import imagen1 from './assets/icon-1.avif'
 import imagen2 from './assets/icon-2.avif'
@@ -8,7 +6,9 @@ import imagen3 from './assets/icon-3.avif'
 import impresora from './assets/impresora.png'
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles'
+import { InfoCard } from './components/InfoCard'
 import './App.css';
+import { InfoSection } from './components/InfoSection'
 //bg-gradient-to-r from-cyan-500 to-blue-500
 function App() {
   const particles = async (main) => {
@@ -158,40 +158,8 @@ function App() {
       <p className='text-5xl text-center text-black pt-12 relative z-10'>WHY 3D PRINTING?</p>
       
 
-      <div id="thanks" className="flex relative justify-evenly to-gray-800 pb-10 text-white animate__animated animate__fadeInDown z-10">
-  {/* Tarjeta 1 */}
-  <div className="flex flex-col bg-white w-[25%] rounded-lg justify-evenly text-center shadow-lg mt-8 transition-transform transform hover:scale-105">
-  <img src={imagen1} className='w-[60%] self-center'></img>
-    <h1 className="text-4xl text-blue-800 font-bold mb-4">Reduce Assembly Time</h1>
-    <hr className="border-t border-gray-400 mb-4" />
-    <p class="text-black px-3">Don't waste time putting products together! Rely on 3D printing to make complex geometries that can be printed as one piece—or consolidated in one build.</p>
-    <a className="bg-blue-700 hover:bg-blue-400 text-white font-semibold hover:text-white py-2 px-4 mt-4 w-[50%] self-center rounded mb-3" href="#">
-      Learn More
-    </a>
-  </div>
+  <InfoSection></InfoSection>
 
-  {/* Tarjeta 2 */}
-  <div className="flex flex-col bg-white w-[25%] rounded-lg justify-evenly text-center shadow-lg mt-8 transition-transform transform hover:scale-105">
-  <img src={imagen2} className='w-[60%] self-center'></img>
-    <h1 className="text-4xl text-blue-800 font-bold mb-4 ">Fast Turnaround</h1>
-    <hr className="border-t border-gray-400 mb-4" />
-    <p class="text-black px-3">Working on a project for a customer that has to be just right? Get models back fast, and 3D print new iterations, if needed, for final feedback and production.</p>
-    <a className="bg-blue-700 hover:bg-blue-400 text-white font-semibold hover:text-white py-2 px-4 mt-4 w-[50%] self-center rounded mb-3" href="#">
-      Learn More
-    </a>
-  </div>
-
-  {/* Tarjeta 3 */}
-  <div className="flex flex-col bg-white w-[25%] rounded-lg justify-evenly text-center shadow-lg mt-8 transition-transform transform hover:scale-105">
-  <img src={imagen3} className='w-[60%] self-center'></img>
-    <h1 className="text-4xl text-blue-800 font-bold mb-4">Reliable Quality</h1>
-    <hr className="border-t border-gray-400 mb-4" />
-    <p class="text-black px-3">Proprietary processes, expert 3D printing operators, and inspections are our secrets to delivering exceptional, quality products every time.​</p>
-    <a className="bg-blue-700 hover:bg-blue-400 text-white font-semibold hover:text-white py-2 px-4 w-[50%] self-center mt-4 rounded mb-3" href="#">
-      Learn More
-    </a>
-  </div>
-</div>
 </div>
 
 <div class="container mx-auto py-16 text-center bg-gray-400 rounded shadow-2xl mt-8 mb-7">
