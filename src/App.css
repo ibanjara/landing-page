@@ -2,6 +2,12 @@ body {
   cursor: url('./assets/cursor.png') 16 16, auto;
 }
 
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
 html{
   scroll-behavior: smooth;
 }
