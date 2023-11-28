@@ -7,7 +7,8 @@ const PrinterModel = () => {
 
   useEffect(() => {
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1005);
+    
 
     // Verifica si ya existe un renderizador
     if (!rendererRef.current) {
@@ -18,7 +19,7 @@ const PrinterModel = () => {
       const width = printerModelElement.clientWidth;
       const height = printerModelElement.clientHeight;
 
-      renderer.setSize(400, 400);
+      renderer.setSize(1000, 1000);
 
       // Asegúrate de que el elemento exista antes de intentar adjuntar el renderizador
       if (printerModelElement) {

@@ -157,9 +157,9 @@ function App() {
     <div className='container mx-auto'>
     <Carousel autoplay="true" cellAlign="center" wrapAround={true} // Hace que el carrusel sea un bucle
       disableEdgeSwiping={true} renderBottomCenterControls={() => null}>
-      <img src={impresion1} style={{ width: '100%', height: '70%', display: 'block', marginTop: '80px' }} />
-      <img src={impresion2} style={{ width: '100%', height: '70%', display: 'block', marginTop: '80px' }} />
-      <img src={impresion3} style={{ width: '100%', height: '70%', display: 'block', marginTop: '80px' }}/>
+      <img src={impresion1} className='sombra' style={{ width: '100%', height: '70%', display: 'block', marginTop: '80px' }} />
+      <img src={impresion2} className='sombra' style={{ width: '100%', height: '70%', display: 'block', marginTop: '80px' }} />
+      <img src={impresion3} className='sombra' style={{ width: '100%', height: '70%', display: 'block', marginTop: '80px' }}/>
     </Carousel>
     </div>
 <div class="container mx-auto px-4 py-12 lg:py-16 text-center bg-gray-400 rounded shadow-2xl lg:mt-[-70px] mb-7">
