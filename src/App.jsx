@@ -6,6 +6,14 @@ import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles'
 import './App.css';
 import { InfoSection } from './components/InfoSection'
+import PrinterModel from './components/PrinterModel';
+import NavBar from './components/NavBar';
+import Carousel from "nuka-carousel"
+
+import impresion1 from './assets/impresion1.jpg'
+import impresion2 from './assets/impresion2.jpeg'
+import impresion3 from './assets/impresion3.jpg'
+
 //bg-gradient-to-r from-cyan-500 to-blue-500
 function App() {
   const particles = async (main) => {
@@ -29,40 +37,8 @@ function App() {
   return (
     <>
       <div className=''>
-      <div className='w-full flex flex-wrap justify-between items-center p-6 fixed z-30 bg-gray-900 text-white'>
-  <div className='flex items-center'>
-    <img src={logo} className='w-12 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]' alt="Logo"></img>
-    <p className='text-2xl ml-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'><strong>PrintHub</strong></p>
-  </div>
-  <div className="block lg:hidden">
-    {/* Icono de hamburguesa para pantallas pequeñas */}
-    <button id="burger-icon" className="text-white focus:outline-none">
-      <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-          d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
-  </div>
-  <div className="hidden lg:flex lg:items-center lg:w-auto">
-    <ul className='grid grid-cols-3 lg:grid-cols-none lg:flex'>
-      <li><a href="" className='p-4 text-lg hover:text-[#4A55A2] hover:font-bold'>Scan</a></li>
-      <li><a href="" className='p-4 text-lg hover:text-[#4A55A2] hover:font-bold'>Shop</a></li>
-      <li><a href="" className='p-4 text-lg hover:text-[#4A55A2] hover:font-bold'>About</a></li>
-    </ul>
-  </div>
-  <div className="hidden lg:flex lg:justify-end">
-    <button className="bg-blue-700 text-white px-4 py-2 rounded-md mx-2 transition duration-300 transform hover:scale-105">
-      <i className="fas fa-user-plus mr-2"></i>
-      Sign Up
-    </button>
-    <button className="bg-white text-blue-700 px-4 py-2 rounded-md transition duration-300 transform hover:scale-105">
-      <i className="fas fa-sign-in-alt mr-2"></i>
-      Login
-    </button>
-  </div>
-</div>
-   
+      
+        <NavBar></NavBar>
       <div className="w-full lg:h-[1150px] bg-gradient-to-r from-blue-900 to-blue-700 flex relative flex-col justify-center items-center">
       <Particles
 
@@ -157,7 +133,7 @@ function App() {
 
     </div>
     
-    <img src={impresora} className='self-center transition duration-300 transform hover:scale-105 mt-7 w-[30%] lg:w-[25%]'></img>
+    <PrinterModel></PrinterModel>
   </div>
 
   <div className="animate-bounce mt-[50px] lg:mt-[100px] bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 self-center ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
@@ -175,9 +151,18 @@ function App() {
     <div id="thanks" className='lg:pt-[150px] pt-[50px]'>
         <p className='text-5xl text-center text-black relative z-10'>Why 3D Printing?</p>
         <InfoSection></InfoSection>
+
     </div>
 
-<div class="container mx-auto px-4 py-12 lg:py-16 text-center bg-gray-400 rounded shadow-2xl mt-8 mb-7">
+    <div className='container mx-auto'>
+    <Carousel autoplay="true" cellAlign="center" wrapAround={true} // Hace que el carrusel sea un bucle
+      disableEdgeSwiping={true} renderBottomCenterControls={() => null}>
+      <img src={impresion1} style={{ width: '100%', height: '70%', display: 'block', marginTop: '80px' }} />
+      <img src={impresion2} style={{ width: '100%', height: '70%', display: 'block', marginTop: '80px' }} />
+      <img src={impresion3} style={{ width: '100%', height: '70%', display: 'block', marginTop: '80px' }}/>
+    </Carousel>
+    </div>
+<div class="container mx-auto px-4 py-12 lg:py-16 text-center bg-gray-400 rounded shadow-2xl lg:mt-[-70px] mb-7">
     <h1 class="text-3xl lg:text-4xl font-bold mb-6 z-10 relative">Unlock Premium Features</h1>
     <p class="text-base lg:text-lg mb-8 z-10 relative">Upgrade to our premium membership for an enhanced experience.</p>
 
