@@ -146,7 +146,7 @@ function App() {
 
   
 </div>
-    <div id="thanks" className='lg:pt-[50px] pt-[50px]'>
+    <div id="thanks" className='pt-[75px] lg:mb-[50px] md:mb-[10px]'>
         <p className='text-4xl lg:text-5xl text-center text-blue-800 font-bold relative mb-6 z-10'>Why 3D Printing?</p>
         <InfoSection></InfoSection>
 
@@ -206,9 +206,9 @@ function App() {
   </div>
 </div>
 
-    <div class="container mx-auto px-4 text-center bg-gray-100 rounded lg:mt-[-90px] mb-10">
+    <div class="container mx-auto px-4 text-center bg-gray-100 rounded mt-10 md:mt-0 lg:mt-[-75px] mb-[75px] md:mb-[100px] lg:mb-[125px]">
     
-    <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-blue-800">Choose Your Membership</h1>
+    <h1 class="text-3xl lg:text-5xl font-bold mb-6 text-blue-800">Choose Your Membership</h1>
     <p class="text-base lg:text-xl mb-8 text-gray-600">Enhance your experience with our membership plans.</p>
 
     <div class="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-8">
@@ -291,7 +291,7 @@ function App() {
 
 
 
-<section class="pb-16 pt-8 bg-gray-100">
+<section class="pb-16 pt-[50px] lg:pt-[100px] md:pt-[100px] bg-gray-100">
     <div class="container mx-auto">
         <h2 class="text-4xl lg:text-5xl font-bold mb-10 text-center text-blue-800">Latest News</h2>
 
