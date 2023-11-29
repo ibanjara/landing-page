@@ -14,6 +14,8 @@ import impresion1 from './assets/impresion1.jpg'
 import impresion2 from './assets/impresion2.jpeg'
 import impresion3 from './assets/impresion3.jpg'
 
+import bg from './assets/bg.png'
+
 //bg-gradient-to-r from-cyan-500 to-blue-500
 function App() {
   const particles = async (main) => {
@@ -212,7 +214,7 @@ function App() {
     <p class="text-base lg:text-xl mb-8 text-gray-600">Enhance your experience with our membership plans.</p>
 
     <div class="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-8">
-        <div class="bg-white rounded-lg shadow-md p-6 lg:p-8 w-full lg:w-100">
+        <div class="bg-white rounded-lg shadow-md p-6 lg:p-8 w-full lg:w-100 relative z-10">
             <h2 class="text-xl lg:text-2xl font-bold mb-4 text-blue-800">Free Membership</h2>
             <p class="text-gray-600">Access essential features to get started</p>
             <ul class=" text-gray-600 mt-4">
@@ -225,22 +227,22 @@ function App() {
         </div>
 
         <div class="bg-blue-800 text-white rounded-lg shadow-md p-8 lg:p-14 w-full lg:w-100">
-            <h2 class="text-xl lg:text-2xl font-bold mb-4">Premium Membership</h2>
-            <p class="text-gray-300">Unlock all features for a premium experience</p>
-            <ul class="text-gray-300 mt-4">
+            <h2 class="text-xl lg:text-2xl font-bold mb-4 z-10">Premium Membership</h2>
+            <p class="text-gray-300 z-10">Unlock all features for a premium experience</p>
+            <ul class="text-gray-300 mt-4 z-10">
                 <li>Full access to advanced features</li>
                 <li>Exclusive content and updates</li>
                 <li>Priority customer support</li>
             </ul>
-            <p class="text-xl lg:text-3xl font-bold mt-4">$9.99/month</p>
-            <button class="bg-white text-blue-800 px-10 w-full py-3 mt-6 rounded-full">Upgrade Now</button>
+            <p class="text-xl lg:text-3xl font-bold mt-4 z-10">$9.99/month</p>
+            <button class="bg-white text-blue-800 px-10 w-full py-3 mt-6 rounded-full z-10">Upgrade Now</button>
         </div>
     </div>
 </div>
 
 
 
-<div class="parallax-container parallax bg-cover bg-center" style={{backgroundImage: "url('https://png.pngtree.com/background/20230520/original/pngtree-various-3d-printed-shapes-are-arranged-on-a-blue-background-picture-image_2677016.jpg')"}}>
+<div class={"parallax-container parallax bg-cover bg-center bg-[url('/src/assets/bg.png')]"}>
     <div class="flex flex-col md:flex-row lg:flex-row md:pt-[100px] lg:pt-[100px]">
         <div class="w-full md:w-1/2 flex items-center justify-center">
             <div class="p-6 text-white">
@@ -325,7 +327,7 @@ function App() {
 
     <footer className="bg-gray-900 text-white p-6 lg:p-10">
     <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
-    <div className="w-full lg:w-2/3 text-center lg:text-left mb-6 lg:mb-0">
+    <div className="w-full lg:w-2/3 text-center lg:text-left mb-6 lg:mb-0 relative z-10">
     <div className="flex items-center justify-center lg:justify-start mb-4">
         <img src={logo} alt="PrintHub Logo" className="mr-2 w-[10%]" />
         <span className="text-3xl ml-3 font-bold">PrintHub</span>
@@ -348,7 +350,7 @@ function App() {
         </a>
     </p>
 
-    <div className="flex justify-center lg:justify-start mt-4 lg:mt-8">
+    <div className="flex justify-center lg:justify-start mt-4 lg:mt-8 relative z-10">
         <div className="mr-4">
             <a className="text-lg font-bold mb-2 lg:mb-4" href="#scan">
                 Scan
@@ -374,7 +376,7 @@ function App() {
 
         <div className="w-full lg:w-1/3">
             
-            <form className="max-w-lg mx-auto">
+            <form className="max-w-lg mx-auto relative z-10">
             <p className='text-3xl mb-3'>Contact us</p>
             <div className="mb-4">
                     <label className="block text-gray-300 text-sm font-bold mb-2" htmlFor="email">
