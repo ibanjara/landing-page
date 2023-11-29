@@ -41,6 +41,15 @@ const Navbar = () => {
           <li><a href="#" className='block p-4 text-lg hover:text-[#4A55A2] hover:font-bold'>Scan</a></li>
           <li><a href="#" className='block p-4 text-lg hover:text-[#4A55A2] hover:font-bold'>Shop</a></li>
           <li><a href="#" className='block p-4 text-lg hover:text-[#4A55A2] hover:font-bold'>About</a></li>
+          <li className='p-4'><button className="bg-blue-700 text-white px-4 py-2 rounded-md mx-2 transition duration-300 transform hover:scale-105">
+          <i className="fas fa-user-plus mr-2"></i>
+          Sign Up
+        </button>
+        </li>
+        <li className='p-4'><button className="bg-white text-blue-700 px-4 py-2 rounded-md transition duration-300 transform hover:scale-105">
+          <i className="fas fa-sign-in-alt mr-2"></i>
+          Login
+        </button></li>
         </ul>
       </div>
       <div className="hidden lg:flex lg:items-center lg:w-auto">

@@ -95,8 +95,17 @@ body{
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
-#printer-model {
-  /* Ajusta la altura según tus necesidades */
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Ajusta la altura del contenedor para lograr el efecto parallax */
+.parallax-container {
+  height: 450px; /* Ajusta según sea necesario */
 }
 
 .sombra{
